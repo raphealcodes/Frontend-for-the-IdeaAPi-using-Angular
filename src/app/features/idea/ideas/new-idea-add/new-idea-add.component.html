@@ -1,0 +1,29 @@
+<p-card>
+    <form [formGroup]="ideaForm" (ngSubmit)= "submit()" class="form">
+        <div class="idea-form-group">
+            <div class="ui-inputgroup">
+            <label for="idea">Idea</label><br>
+            <input type="text"  name="idea" placeholder="Enter new Idea..." pInputText formControlName="idea" >
+            </div>
+
+        <div class="ui-inputgroup">
+            <label for="description">Description</label><br>
+            <textarea name="description" pInputTextarea rows="5" placeholder="Enter description here...."
+             cols="50" formControlName="description"></textarea>
+                                 </div>
+
+        </div>
+
+
+<div class="ui-button-info">
+    <button pButton type="submit" [disabled]="ideaForm.invalid" label="submit"></button>
+
+ </div>
+
+    
+    
+    
+    
+    </form>
+
+</p-card>

@@ -1,0 +1,16 @@
+
+
+<p-card >
+
+        <div class="ui-button-danger" *ngIf="displayOptions"><button icon="fa fa-times" pButton (click) ="Delete.emit()"></button>
+            <button icon="fa fa-plus" pButton [routerLink]="['/idea', idea.id, 'edit']"  ></button></div>
+    <div class="idea-headers"> <h2 [routerLink]= "['/idea', idea.id]"  >{{idea.idea}}</h2></div>
+        <p>Description: {{idea.description}}</p>
+        <div class="idea-footer">
+        <p>created by <a>{{idea.author.username}}</a> on {{idea.created | date}}</p>
+        <p><a>comments: ({{idea.comment?.length || 0}})</a></p>
+        
+        </div>
+</p-card>
+
+

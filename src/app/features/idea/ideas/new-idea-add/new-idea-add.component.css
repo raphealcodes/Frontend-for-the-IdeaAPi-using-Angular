@@ -1,0 +1,21 @@
+.ui-inputgroup {
+    display: block;
+    margin-top: 2em;
+}
+
+
+.form{
+    margin-left: 16em; 
+}
+
+input[type="text"] {
+    
+    width: 380px;
+}
+
+label{
+    margin-left: 7em;
+    font-size: 20px;
+    margin-bottom: 3em;
+}
+button {margin-left: 10em;}

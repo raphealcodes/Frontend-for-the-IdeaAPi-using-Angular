@@ -1,0 +1,10 @@
+<p-card  >
+    <div class="userCard-info">
+    <h3 [routerLink]="['/users', user.username]"  >{{user.username}}</h3>
+    <p>Registered: {{user.created | date}}</p>
+</div>
+<div class="userCard-links">
+    <a>Ideas: ({{user.ideas.length || 0}})</a> &nbsp;
+    <a>Bookmark: ({{user.bookmarks?.length || 0}})</a>
+</div>
+</p-card>

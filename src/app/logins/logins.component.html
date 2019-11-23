@@ -1,0 +1,16 @@
+<p-card>
+
+    <form [formGroup]="regForm" (ngSubmit)= login()>
+    <div class="ui-inputgroup">
+      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+        <input  pInputText type="text" placeholder="username" formControlName= "username">
+        </div>
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="fa fa-key"></i></span>
+        <input pInputText type="text" placeholder="password" formControlName= "password">
+    </div>
+    <button pButton type="button" label="Register" class="ui-button-info" (click)="register()" [disabled]= "regForm.invalid"></button>
+    <button pButton type="submit" label="login" [disabled]= "regForm.invalid"></button>
+    </form>
+    </p-card>
+

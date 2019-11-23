@@ -1,0 +1,5 @@
+<div *ngIf="idea" >
+<app-idea *ngIf="idea" [idea] = "idea"></app-idea>
+
+<p-card *ngFor="let comment of (idea.comment)">{{comment.comment}}</p-card>
+</div>

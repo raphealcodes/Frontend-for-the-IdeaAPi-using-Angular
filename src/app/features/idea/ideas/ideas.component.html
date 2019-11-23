@@ -1,0 +1,10 @@
+<p-card>
+    <button [routerLink]="['/idea', 'new']"
+     label="Create Idea"
+     icon="fa fa-plus"
+     pButton
+     class="ui-button-info"
+      routerLinkActive="router-link-active" ></button>
+</p-card> 
+<app-idea  *ngFor = "let idea of ideas | async" [idea] = "idea" (Delete) = delete(idea.id)
+[displayOptions] = "idea.author.id=== currentUser?.id"> </app-idea>
